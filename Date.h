@@ -1,4 +1,5 @@
 
+
 #ifndef PROGETTO_DATE_H
 #define PROGETTO_DATE_H
 
@@ -13,7 +14,7 @@ public:
 
     }
     ~Date(){}
-    void SetNewDate(char * mese,int anno);
+    void SetNewDate();
 };
 
 
