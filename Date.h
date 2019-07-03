@@ -17,9 +17,9 @@ public:
     void SetNewDate();
     void GetActualDate();
     void PrintDate();
-    void GetDay();
-    void GetMonth();
-    void GetYear();
+    int GetDay();
+    int GetMonth();
+    int GetYear();
     void SetDay(int Day);
     void SetMonth(int Month);
     void SetYear(int Year);
