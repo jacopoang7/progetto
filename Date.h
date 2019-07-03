@@ -1,8 +1,7 @@
-
-
 #ifndef PROGETTO_DATE_H
 #define PROGETTO_DATE_H
 
+#include<string>
 
 class Date {
 private:
@@ -10,11 +9,21 @@ private:
     int Month;
     int Year;
 public:
-    Date(int D,int M,int Y):Day(D),Month(M),Year(Y){
-
+    Date(){
+        Day=Month=Year=1;
     }
+    Date(int D,int M,int Y):Day(D),Month(M),Year(Y){}
     ~Date(){}
     void SetNewDate();
+    void GetActualDate();
+    void PrintDate();
+    void GetDay();
+    void GetMonth();
+    void GetYear();
+    void SetDay(int Day);
+    void SetMonth(int Month);
+    void SetYear(int Year);
+    void ConvertMonth(string M);
 };
 
 
