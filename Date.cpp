@@ -1,4 +1,5 @@
 
+
 #include "Date.h"
 #include<chrono>
 void Date::SetNewDate() {
@@ -33,13 +34,13 @@ void Date::PrintDate() {
     cout << "Month: "<<Month<< endl;
     cout << "Day: "<< Day << endl;
 }
-void Date::GetDay() {
+int  Date::GetDay() {
     return Day;
 }
-void Date::GetMonth() {
+int Date::GetMonth() {
     return Month;
 }
-void Date::GetYear() {
+int Date::GetYear() {
     return Year;
 }
 void set_day(int Day) {
