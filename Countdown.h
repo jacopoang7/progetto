@@ -31,7 +31,6 @@ void update();
 private:
  QPushButton *bottone1;
  QPushButton *bottone2;
-// QTimer *updatetimer;
 
 };
 
