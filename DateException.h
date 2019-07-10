@@ -15,7 +15,6 @@ int err_code;
 
 public:
 
-/*! codici di errore */
 enum codes
         {
 
