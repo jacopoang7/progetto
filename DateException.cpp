@@ -9,10 +9,7 @@ else this->err_code = err_code;
 
 }
 
-/*! brief Getter per il codice di errore
-    return codice di errore
 
-*/
 int DateException::code(){
     return this->err_code;
 }
