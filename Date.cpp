@@ -1,7 +1,7 @@
-
-
 #include "Date.h"
 #include<chrono>
+#include<iostream>
+#include<ctime>
 void Date::SetNewDate() {
     srand(time(NULL));
     Month=rand()%12+1;
@@ -13,7 +13,7 @@ void Date::SetNewDate() {
             Day = rand() % 28 + 1;
         }
     }
-    if(Month==11 || Month=4 || Month=6 || Month=9){
+    if(Month==11 || Month==4 || Month==6 || Month==9){
         Day=rand()%30+1;
     }
     else{
@@ -29,10 +29,10 @@ void Date::GetActualDate() {
     Day=ltm->tm_mday;
 }
 
-void Date::PrintDate() {
-    cout << "Year" <<Year <<endl;
-    cout << "Month: "<<Month<< endl;
-    cout << "Day: "<< Day << endl;
+void Date::PrintDate() const{
+    std::cout << "Year" <<Year <<std::endl;
+    std::cout << "Month: "<<Month<< std::endl;
+    std::cout << "Day: "<< Day << std::endl;
 }
 int  Date::GetDay() {
     return Day;
@@ -45,26 +45,26 @@ int Date::GetYear() {
 }
 void set_day(int Day) {
     if ((Day <= 0) || (Day >= 32)) {
-        cerr << "Day e' limitato fra 1 e 31, te hai inserito: " << day << endl;
+        std::cerr << "Day e' limitato fra 1 e 31, te hai inserito: " << Day << std::endl;
         return;
     }
-    this->day = day;
+    this->Day = Day;
 }
 void set_month(int Month) {
-    if ((month <= 0) || (month >= 13)) {
-        cerr << "Month e' limitato fra 1 e 12, te hai inserito:  " << month << endl;
+    if ((Month <= 0) || (Month >= 13)) {
+        std::cerr << "Month e' limitato fra 1 e 12, te hai inserito:  " << Month << std::endl;
         return;
     }
-    this->month = month;
+    this->Month = Month;
 }
 void Date::SetYear(int Year) {
-    if ((year <= 0) || (year >= 2020)) {
-        cerr << "Year e' limitato fra 1 e 2019, te hai inserito: " << year << endl;
+    if ((Year <= 0) || (Year >= 2020)) {
+        std::cerr << "Year e' limitato fra 1 e 2019, te hai inserito: " << Year << std::endl;
         return;
     }
-    this->year = year;
+    this->Year = Year;
 }
-void Date::ConvertMonth(string M) {
+void Date::ConvertMonth(std::string M) {
     switch(M){
         case(M=="Gennaio") set_month(1);
             break
