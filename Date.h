@@ -18,6 +18,8 @@ public:
     void SetNewDate();
     virtual void GetActualDate();
     void PrintDate() const;
+    void PrintDateAsian() const;
+    void PrintDateUsa() const;
     int GetDay();
     int GetMonth();
     int GetYear();
