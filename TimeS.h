@@ -1,30 +1,23 @@
-
 #ifndef PROGETTO_TIMES_H
 #define PROGETTO_TIMES_H
+#include "Time.h"
 
-
-class TimeS {
+class TimeS: public Time {
 private:
     int hours;
     int minutes;
     int seconds;
 public:
-    TimeS(){
-        hours=0;
-        minutes=0;
+    TimeS():Time(){
         seconds=0;
     }
-    TimeS(int h, int m, int s):hours(h),minutes(m), seconds(s){}
+    TimeS(int h, int m, int s):Time(h,m), seconds(s){}
     virtual ~TimeS(){}
-    void SetNewTime(int hours,int minutes);
-    int GetHours();
-    int GetMinutes();
+    void SetNewTime(int hours,int minutes,int seconds) override;
     int GetSeconds();
-    void SetHours(int hours);
-    void SetMinutes(int minutes);
     void SetSeconds(int seconds);
-    virtual void GetCurrentTime();
-    void PrintTime() const;
+    void GetCurrentTime() override;
+    void PrintTime() const override;
 
 };
 
