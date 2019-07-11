@@ -1,8 +1,6 @@
-#include "DateTime.h"
-#include "Time.h"
-#include "Date.h"
-
-void DateTime::PrintDateTime() const {
-    cout<<"Date:"<<GetDay()<<"/"<<GetMonth()<<"/"<<GetYear()<<endl;
-    cout<<"Time="<<GetHours()<<":"<<GetMinutes()<<endl;
+#include<iostream>
+#include "DateTimeS.h"
+void DateTimeS::PrintDateTimeS() const {
+    std::cout<<"Date:"<<GetDay()<<"/"<<GetMonth()<<"/"<<GetYear()<<std::endl;
+    std::cout<<"Time="<<GetHours()<<":"<<GetMinutes()<<":"<<GetSeconds()<<std::endl;
 }
