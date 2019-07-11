@@ -1,7 +1,3 @@
-//
-// Created by Jacopo Angeli on 03/07/2019.
-//
-
 #ifndef PROGETTO_TIME_H
 #define PROGETTO_TIME_H
 
@@ -24,7 +20,7 @@ public:
     void SetMinutes(int minutes);
     virtual void GetCurrentTime();
     virtual void PrintTime() const;
-
+    virtual void PrintTimeEnglish() const;
 };
 
 
