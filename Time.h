@@ -1,4 +1,3 @@
-
 #ifndef PROGETTO_TIME_H
 #define PROGETTO_TIME_H
 
@@ -19,8 +18,8 @@ public:
     int GetMinutes();
     void SetHours(int hours);
     void SetMinutes(int minutes);
-    void GetCurrentTime();
-    void PrintTime();
+    virtual void GetCurrentTime();
+    void PrintTime() const;
 
 };
 
