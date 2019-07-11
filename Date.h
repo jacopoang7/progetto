@@ -16,15 +16,15 @@ public:
     Date(int D,int M,int Y):Day(D),Month(M),Year(Y){}
     virtual ~Date(){}
     void SetNewDate();
-    void GetActualDate();
-    void PrintDate();
+    virtual void GetActualDate();
+    void PrintDate() const;
     int GetDay();
     int GetMonth();
     int GetYear();
     void SetDay(int Day);
     void SetMonth(int Month);
     void SetYear(int Year);
-    void ConvertMonth(string M);
+    void ConvertMonth(std::string M);
 };
 
 
