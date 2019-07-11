@@ -18,6 +18,7 @@ public:
     void SetSeconds(int seconds);
     void GetCurrentTime() override;
     void PrintTime() const override;
+    void PrintTimeEnglish() const override;
 
 };
 
