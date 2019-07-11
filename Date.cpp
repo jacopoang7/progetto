@@ -67,28 +67,28 @@ void Date::SetYear(int Year) {
 void Date::ConvertMonth(std::string M) {
     switch(M){
         case(M=="Gennaio") set_month(1);
-            break
+            break;
         case(M=="Febbraio")set_month(2);
-            break
+            break;
         case(M=="Marzo") set_month(3);
-            break
+            break;
         case(M=="Aprile")set_month(4);
-            break
+            break;
         case(M=="Maggio") set_month(5);
-            break
+            break;
         case(M=="Giugno")set_month(6);
-            break
+            break;
         case(M=="Luglio") set_month(7);
-            break
+            break;
         case(M=="Agosto")set_month(8);
-            break
+            break;
         case(M=="Settembre") set_month(9);
-            break
+            break;
         case(M=="Ottobre")set_month(10);
-            break
+            break;
         case(M=="Novermbre") set_month(11);
-            break
+            break;
         case(M=="Dicembre")set_month(12);
-            break
+            break;
     }
 }
