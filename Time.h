@@ -13,13 +13,13 @@ public:
     }
     Time(int h, int m):hours(h),minutes(m){}
     virtual ~Time(){}
-    void SetNewTime(int hours,int minutes);
+    virtual void SetNewTime(int hours,int minutes);
     int GetHours();
     int GetMinutes();
     void SetHours(int hours);
     void SetMinutes(int minutes);
     virtual void GetCurrentTime();
-    void PrintTime() const;
+    virtual void PrintTime() const;
 
 };
 
