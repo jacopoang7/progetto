@@ -1,10 +1,11 @@
 #ifndef PROGETTO_DATEEXCEPTION_H
 #define PROGETTO_DATEEXCEPTION_H
 
-class DateException {
 
 #include <stdexcept>
 #include <string>
+
+
 
 class DateException : public std::invalid_argument
 {
@@ -15,14 +16,15 @@ int err_code;
 
 public:
 
+
 enum codes
         {
 
-       UNDEFINED, 
+       UNDEFINED,
 
-       STRING_INVALID_FORMAT, 
+       STRING_INVALID_FORMAT,
 
-       INVALID_FORMAT 
+       INVALID_FORMAT
 
 };
 
@@ -36,7 +38,6 @@ int code();
 
 
 
-};
 
 
 #endif //PROGETTO_DATEEXCEPTION_H
