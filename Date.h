@@ -1,28 +1,31 @@
+#ifndef PROGETTO_DATE_H
+#define PROGETTO_DATE_H
 
-#ifndef PROGETTO_TIME_H
-#define PROGETTO_TIME_H
+#include<string>
 
 
-class Time {
+class Date{
 private:
-    int hours;
-    int minutes;
+    int Day;
+    int Month;
+    int Year;
 public:
-    Time(){
-        hours=0;
-        minutes=0;
+    Date(){
+        Day=Month=Year=1;
     }
-    Time(int h, int m):hours(h),minutes(m){}
-    virtual ~Time(){}
-    void SetNewTime(int hours,int minutes);
-    int GetHours();
-    int GetMinutes();
-    void SetHours(int hours);
-    void SetMinutes(int minutes);
-    void GetCurrentTime();
-    void PrintTime();
-
+    Date(int D,int M,int Y):Day(D),Month(M),Year(Y){}
+    virtual ~Date(){}
+    void SetNewDate();
+    void GetActualDate();
+    void PrintDate();
+    int GetDay();
+    int GetMonth();
+    int GetYear();
+    void SetDay(int Day);
+    void SetMonth(int Month);
+    void SetYear(int Year);
+    void ConvertMonth(string M);
 };
 
 
-#endif //PROGETTO_TIME_H
+#endif //PROGETTO_DATE_H
