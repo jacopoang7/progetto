@@ -1,3 +1,4 @@
+
 #ifndef PROGETTO_TIME_H
 #define PROGETTO_TIME_H
 
@@ -12,7 +13,7 @@ public:
         minutes=0;
     }
     Time(int h, int m):hours(h),minutes(m){}
-    ~Time(){}
+    virtual ~Time(){}
     void SetNewTime(int hours,int minutes);
     int GetHours();
     int GetMinutes();
@@ -20,8 +21,6 @@ public:
     void SetMinutes(int minutes);
     void GetCurrentTime();
     void PrintTime();
-
-
 
 };
 
