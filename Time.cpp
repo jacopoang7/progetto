@@ -1,5 +1,6 @@
-
 #include "Time.h"
+#include <ctime>
+#include <iostream>
 
 void Time::SetNewTime(int hours,int minutes){
     this->hours=hours;
@@ -23,6 +24,6 @@ void Time::GetCurrentTime() {
     hours=1 + ltm->tm_hour;
     minutes=1 + ltm->tm_min;
 }
-void Time::PrintTime() {
-    cout<<"Time="<<hours<<":"<<minutes<<endl;
+void Time::PrintTime() const {
+    std::cout<<"Time="<<hours<<":"<<minutes<<std::endl;
 }
