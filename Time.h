@@ -1,27 +1,30 @@
-#ifndef PROGETTO_TIME_H
-#define PROGETTO_TIME_H
 
+#include "Time.h"
+#include <ctime>
+#include <iostream>
 
-class Time {
-private:
-    int hours;
-    int minutes;
-public:
-    Time(){
-        hours=0;
-        minutes=0;
-    }
-    Time(int h, int m):hours(h),minutes(m){}
-    virtual ~Time(){}
-    virtual void SetNewTime(int hours,int minutes);
-    int GetHours();
-    int GetMinutes();
-    void SetHours(int hours);
-    void SetMinutes(int minutes);
-    virtual void GetCurrentTime();
-    virtual void PrintTime() const;
-
-};
-
-
-#endif //PROGETTO_TIME_H
+void Time::SetNewTime(int hours,int minutes){
+    this->hours=hours;
+    this->minutes=minutes;
+}
+int Time::GetHours() {
+    return hours;
+}
+int Time::GetMinutes() {
+    return minutes;
+}
+void Time::SetHours(int hours) {
+    this->hours=hours;
+}
+void Time::SetMinutes(int minutes) {
+    this->minutes=minutes;
+}
+void Time::GetCurrentTime() {
+    time_t now = time(0);
+    tm *ltm = localtime(&now);
+    hours=1 + ltm->tm_hour;
+    minutes=1 + ltm->tm_min;
+}
+void Time::PrintTime() const {
+    std::cout<<"Time="<<hours<<":"<<minutes<<std::endl;
+}
