@@ -1,3 +1,4 @@
+
 #include "Date.h"
 #include<chrono>
 #include<iostream>
@@ -30,9 +31,7 @@ void Date::GetActualDate() {
 }
 
 void Date::PrintDate() const{
-    std::cout << "Year" <<Year <<std::endl;
-    std::cout << "Month: "<<Month<< std::endl;
-    std::cout << "Day: "<< Day << std::endl;
+   std::cout<<Day<<"/"<<Month<<"/"<<Year<<std::endl;
 }
 int  Date::GetDay() {
     return Day;
@@ -91,4 +90,10 @@ void Date::ConvertMonth(std::string M) {
         case(M=="Dicembre")set_month(12);
             break;
     }
+}
+void Date::PrintDateAsian() const {
+    std::cout<<Year<<"/"<<Month<<"/"<<Day<<std::endl;
+}
+void Date::PrintDateUsa() const {
+    std::cout<<Month<<"/"<<Day<<"/"<<Year<<std::endl;
 }
