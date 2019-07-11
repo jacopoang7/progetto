@@ -1,5 +1,7 @@
+#include<ctime>
+#include<iostream>
 #include "TimeS.h"
-void Time::SetNewTime(int hours,int minutes,int seconds){
+void TimeS::SetNewTime(int hours,int minutes,int seconds){
     this->hours=hours;
     this->minutes=minutes;
     this->seconds=seconds;
@@ -29,6 +31,6 @@ void TimeS::GetCurrentTime() {
     minutes=1 + ltm->tm_min;
     seconds=1 + 1tm->tm_sec;
 }
-void TimeS::PrintTime() {
-    cout<<"Time="<<hours<<":"<<minutes<<":"<<seconds<<endl;
+void TimeS::PrintTime() const{
+    std::cout<<"Time="<<hours<<":"<<minutes<<":"<<seconds<<std::endl;
 }
