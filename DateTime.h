@@ -10,6 +10,7 @@ public:
     DateTime(int d,int m,int y,int h, int min):Day(d),Month(m),Year(y),hours(h),minutes(min){}
     virtual ~DateTime(){}
     void PrintDateTime() const;
+    
 };
 
 
