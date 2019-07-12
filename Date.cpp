@@ -2,6 +2,9 @@
 #include<chrono>
 #include<iostream>
 #include<ctime>
+
+
+
 void Date::SetNewDate() {
     srand(time(NULL));
     Month=rand()%12+1;
@@ -41,19 +44,19 @@ int Date::GetMonth() {
 int Date::GetYear() {
     return Year;
 }
-void set_day(int Day) {
+void Date::SetDay(int Day) {
     if ((Day <= 0) || (Day >= 32)) {
         std::cerr << "Day e' limitato fra 1 e 31, te hai inserito: " << Day << std::endl;
         return;
     }
-    this->Day = Day;
+    this->Day= Day;
 }
-void set_month(int Month) {
+void Date::SetMonth(int Month) {
     if ((Month <= 0) || (Month >= 13)) {
         std::cerr << "Month e' limitato fra 1 e 12, te hai inserito:  " << Month << std::endl;
         return;
     }
-    this->Month = Month;
+    this->Month= Month;
 }
 void Date::SetYear(int Year) {
     if ((Year <= 0) || (Year >= 2020)) {
@@ -63,18 +66,18 @@ void Date::SetYear(int Year) {
     this->Year = Year;
 }
 void Date::ConvertMonth(std::string M) {
-        if(M=="Gennaio") set_month(1);
-        if(M=="Febbraio")set_month(2);
-        if(M=="Marzo") set_month(3);
-        if(M=="Aprile")set_month(4);
-        if(M=="Maggio") set_month(5);
-        if(M=="Giugno")set_month(6);
-        if(M=="Luglio") set_month(7);
-        if(M=="Agosto")set_month(8);
-        if(M=="Settembre") set_month(9);
-        if(M=="Ottobre")set_month(10);
-        if(M=="Novermbre") set_month(11);
-        if(M=="Dicembre") set_month(12);
+        if(M=="Gennaio") SetMonth(1);
+        if(M=="Febbraio")SetMonth(2);
+        if(M=="Marzo") SetMonth(3);
+        if(M=="Aprile")SetMonth(4);
+        if(M=="Maggio") SetMonth(5);
+        if(M=="Giugno")SetMonth(6);
+        if(M=="Luglio") SetMonth(7);
+        if(M=="Agosto")SetMonth(8);
+        if(M=="Settembre") SetMonth(9);
+        if(M=="Ottobre")SetMonth(10);
+        if(M=="Novermbre") SetMonth(11);
+        if(M=="Dicembre") SetMonth(12);
 }
 void Date::PrintDateAsian() const {
     std::cout<<Year<<"/"<<Month<<"/"<<Day<<std::endl;
