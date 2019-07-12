@@ -1,4 +1,3 @@
-
 #include "Date.h"
 #include<chrono>
 #include<iostream>
@@ -64,32 +63,18 @@ void Date::SetYear(int Year) {
     this->Year = Year;
 }
 void Date::ConvertMonth(std::string M) {
-    switch(M){
-        case(M=="Gennaio") set_month(1);
-            break;
-        case(M=="Febbraio")set_month(2);
-            break;
-        case(M=="Marzo") set_month(3);
-            break;
-        case(M=="Aprile")set_month(4);
-            break;
-        case(M=="Maggio") set_month(5);
-            break;
-        case(M=="Giugno")set_month(6);
-            break;
-        case(M=="Luglio") set_month(7);
-            break;
-        case(M=="Agosto")set_month(8);
-            break;
-        case(M=="Settembre") set_month(9);
-            break;
-        case(M=="Ottobre")set_month(10);
-            break;
-        case(M=="Novermbre") set_month(11);
-            break;
-        case(M=="Dicembre")set_month(12);
-            break;
-    }
+        if(M=="Gennaio") set_month(1);
+        if(M=="Febbraio")set_month(2);
+        if(M=="Marzo") set_month(3);
+        if(M=="Aprile")set_month(4);
+        if(M=="Maggio") set_month(5);
+        if(M=="Giugno")set_month(6);
+        if(M=="Luglio") set_month(7);
+        if(M=="Agosto")set_month(8);
+        if(M=="Settembre") set_month(9);
+        if(M=="Ottobre")set_month(10);
+        if(M=="Novermbre") set_month(11);
+        if(M=="Dicembre") set_month(12);
 }
 void Date::PrintDateAsian() const {
     std::cout<<Year<<"/"<<Month<<"/"<<Day<<std::endl;
