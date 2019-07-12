@@ -1,3 +1,4 @@
+
 #ifndef PROGETTO_DATE_H
 #define PROGETTO_DATE_H
 
@@ -28,6 +29,3 @@ public:
     void SetYear(int Year);
     void ConvertMonth(std::string M);
 };
-
-
-#endif //PROGETTO_DATE_H
