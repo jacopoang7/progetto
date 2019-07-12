@@ -1,8 +1,13 @@
+cmake_minimum_required(VERSION 3.13)
 project(progetto)
 
 add_subdirectory(test)
 
 set(CMAKE_CXX_STANDARD 11)
+set(SOURCE_FILES Date.cpp Date.h)
+add_executable(DateTest.h DateTest.cpp main.cpp)
+add_library(core ${SOURCE_FILES})
+target_link_libraries(DateTest.h DateTest.cpp core)
 
-add_executable(progetto main.cpp DateException.cpp DateException.h Date.cpp Date.h Time.cpp Time.h TimeS.cpp TimeS.h DateTime.cpp DateTime.h DateTest.cpp DateTest.h DateTimeS.cpp DateTimeS.h)
+add_executable(progetto main.cpp DateException.cpp DateException.h Date.cpp Date.h Time.cpp Time.h TimeS.cpp TimeS.h DateTime.cpp DateTime.h DateTest.cpp DateTest.h DateTimeS.cpp DateTimeS.h RunAllTest.cpp)
 #target_link_libraries(progetto)
